@@ -11,7 +11,6 @@ class Arham extends Model
 
 
    protected $table= "arham";
-
    protected  $primarykey= "std_id";
 
 
