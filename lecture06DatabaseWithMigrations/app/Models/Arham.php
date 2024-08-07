@@ -9,9 +9,7 @@ class Arham extends Model
 {
     use HasFactory;
 
-
-   protected $table= "arham";
-   protected  $primarykey= "std_id";
-
-
+    protected $table = "arham";
+    protected $primaryKey = "std_id";
 }
+

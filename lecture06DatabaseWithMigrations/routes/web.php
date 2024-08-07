@@ -11,6 +11,8 @@ Route::get('/', function () {
 
 Route::get('/admission',[Maheen::class, "create"] );
 Route::post('/admission',[Maheen::class, "storedata"] );
+Route::get('/showquery',[Maheen::class,"showkaro"] );
+Route::get('/admission/delete/{std_id}',[Maheen::class,"delete"] );
 
 
 Route::get('arhamkadata/', function () {
