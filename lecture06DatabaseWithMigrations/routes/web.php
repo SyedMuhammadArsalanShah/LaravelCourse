@@ -15,6 +15,17 @@ Route::get('/showquery',[Maheen::class,"showkaro"] );
 Route::get('/admission/delete/{std_id}',[Maheen::class,"delete"] );
 
 
+
+
+
+
+
+
+
+Route::get('/admission/edit/{std_id}',[Maheen::class,"edit"] );
+Route::post('/admission/update/{std_id}',[Maheen::class,"update"] );
+
+
 Route::get('arhamkadata/', function () {
 
      $arham=Arham::all();

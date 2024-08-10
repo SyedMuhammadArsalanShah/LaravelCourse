@@ -7,11 +7,15 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="//cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css">
+
 </head>
 
 <body>
     <div class="container mt-5">
-        <table class="table table-striped table-hover">
+        <table class="table table-striped table-hover" id="myTable">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -53,8 +57,11 @@
                             @endif
                         </td>
                         <td>
-                            <a href="{{ url('/admission/delete', [$values->std_id]) }}" class="btn btn-danger btn-sm">Delete</a><br>
-                            <button class="btn btn-primary btn-sm">Edit</button>
+                            <a href="{{ url('/admission/delete', [$values->std_id]) }}"
+                                class="btn btn-danger btn-sm">Delete</a><br>
+                            <a href="{{ url('/admission/edit', [$values->std_id]) }}"
+                                class="btn btn-info btn-sm">Edit</a><br>
+
                         </td>
                     </tr>
                 @endforeach
@@ -63,6 +70,26 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
+
+
+    <!--jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!-- js link datatable  -->
+    <script src="//cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
+
+
+    <script>
+        let table = new DataTable('#myTable');
     </script>
 </body>
 
